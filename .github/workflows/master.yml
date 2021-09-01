@@ -29,8 +29,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo add buildpack repo and install
-          add-apt-repository ppa:cncf-buildpacks/pack-cli
-          apt-get update
-          apt-get install pack-cli -y
+          sudo add-apt-repository ppa:cncf-buildpacks/pack-cli
+          sudo apt-get update
+          sudo apt-get install pack-cli -y
           echo is pack installed ?
           pack --version
