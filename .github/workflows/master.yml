@@ -28,9 +28,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Is docker installed ?
-          docker --version
-          echo Show directory
-          ls -a
+          echo add buildpack repo and install
+          add-apt-repository ppa:cncf-buildpacks/pack-cli
+          apt-get update
+          apt-get install pack-cli -y
           echo is pack installed ?
           pack --version
