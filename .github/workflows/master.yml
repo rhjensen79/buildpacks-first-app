@@ -41,6 +41,6 @@ jobs:
       - name: Build
         run: |
           echo Build container
-          pack build registry.cmplab.dk/cmplab/first-app:${{ github.run_id }}
+          pack build ${{ secrets.REGISTRY }}/cmplab/first-app:${{ github.run_id }}
           echo Push container to registry
-          docker push registry.cmplab.dk/cmplab/first-app:${{ github.run_id }}
+          docker push ${{ secrets.REGISTRY }}/cmplab/first-app:${{ github.run_id }}
