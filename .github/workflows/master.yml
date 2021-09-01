@@ -32,3 +32,5 @@ jobs:
           docker --version
           echo Show directory
           ls -a
+          echo is pack installed ?
+          pack --version
