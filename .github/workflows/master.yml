@@ -32,6 +32,8 @@ jobs:
           sudo add-apt-repository ppa:cncf-buildpacks/pack-cli
           sudo apt-get update
           sudo apt-get install pack-cli -y
+          echo set pack builder
+          pack config default-builder heroku/buildpacks:20
 
       # Runs a set of commands using the runners shell
       - name: Build
